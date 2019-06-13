@@ -154,7 +154,7 @@ class HomeScreen extends React.Component {
               this.props.navigation.navigate('Details', { data: item.info });
             }}
           >
-            <Text style={{ textWeight: 700 }}>{item.key}</Text>
+            <Text style={{ fontWeight: 'bold' }}>{item.key}</Text>
             <Text>Your Event</Text>
             <Text>{item.info.time}</Text>
           </TouchableOpacity>
@@ -172,14 +172,14 @@ class HomeScreen extends React.Component {
       >
         {item.info === 'create-event' ? (
           <View>
-            <Text style={{ textWeight: 700 }}>{item.key}</Text>
+            <Text style={{ fontWeight: 'bold' }}>{item.key}</Text>
             <TouchableOpacity>
               <Image source={require('../assets/images/slices/home_screen/addnewevent.png')} />
             </TouchableOpacity>
           </View>
         ) : (
           <View>
-            <Text style={{ textWeight: 700 }}>{item.key}</Text>
+            <Text style={{ fontWeight: 'bold' }}>{item.key}</Text>
             <Text>{item.info.hostname}</Text>
             <Text>{item.info.time}</Text>
           </View>

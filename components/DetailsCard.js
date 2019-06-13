@@ -71,14 +71,14 @@ class DetailsCard extends React.Component {
               {this.props.data.status !== 'rejected' ? (
                 <Image source={require('../assets/images/slices/home_screen/Decline.png')} />
               ) : (
-                <Text style={{ textWeight: 'bold', color: 'red' }}> Declined </Text>
+                <Text style={{ fontWeight: 'bold', color: 'red' }}> Declined </Text>
               )}
             </TouchableOpacity>
             <TouchableOpacity>
               {this.props.data.status !== 'accepted' ? (
                 <Image source={require('../assets/images/slices/home_screen/Accept.png')} />
               ) : (
-                <Text style={{ textWeight: 'bold', color: 'green' }}> Accepted </Text>
+                <Text style={{ fontWeight: 'bold', color: 'green' }}> Accepted </Text>
               )}
             </TouchableOpacity>
           </View>

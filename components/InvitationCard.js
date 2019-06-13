@@ -101,7 +101,7 @@ class InvitationCard extends React.Component {
             {this.state.data1.status !== 'rejected' ? (
               <Image source={require('../assets/images/slices/home_screen/Decline.png')} />
             ) : (
-              <Text style={{ textWeight: 'bold', color: 'red' }}> Declined </Text>
+              <Text style={{ fontWeight: 'bold', color: 'red' }}> Declined </Text>
             )}
             {/* <Image source={require('../assets/images/slices/home_screen/Decline.png')} /> */}
           </TouchableOpacity>
@@ -109,7 +109,7 @@ class InvitationCard extends React.Component {
             {this.state.data1.status !== 'accepted' ? (
               <Image source={require('../assets/images/slices/home_screen/Accept.png')} />
             ) : (
-              <Text style={{ textWeight: 'bold', color: 'green' }}> Accepted </Text>
+              <Text style={{ fontWeight: 'bold', color: 'green' }}> Accepted </Text>
             )}
           </TouchableOpacity>
         </View>
