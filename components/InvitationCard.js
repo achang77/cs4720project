@@ -28,7 +28,8 @@ class InvitationCard extends React.Component {
 
     const db = firebase.firestore();
     const dbRef = db.collection('test-data').doc('invitations');
-    const dataobj = { id: data };
+    const name = data.id;
+    const dataobj = { name: data };
     dbRef.set(dataobj, { merge: true });
     console.log('this sent to firestore: ', dataobj);
   }
@@ -43,7 +44,8 @@ class InvitationCard extends React.Component {
 
     const db = firebase.firestore();
     const dbRef = db.collection('test-data').doc('invitations');
-    const dataobj = { id: data };
+    const name = data.id;
+    const dataobj = { name: data };
     dbRef.set(dataobj, { merge: true });
     console.log('this sent to firestore: ', dataobj);
   }

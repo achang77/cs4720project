@@ -30,7 +30,6 @@ class HomeScreen extends React.Component {
   // static navigationOptions = {
   //   title: 'DinDin',
   // };
-
   constructor(props) {
     super(props);
     this.state = {
@@ -39,16 +38,15 @@ class HomeScreen extends React.Component {
       accepted_invitations: {
         invite4: {
           hostname: 'Alma A Evans',
-          date: 'Wednesday 12 June',
+          date: 'Monday 17 June',
           time: '8:00 PM',
           status: 'accepted',
           location: 'Silver Kitchen, New Street',
           id: 'invite4',
         },
-
         invite6: {
           hostname: 'user',
-          date: 'Friday 14 June',
+          date: 'Wednesday 19 June',
           time: '8:00 PM',
           status: 'accepted',
           location: 'Silver Kitchen, New Street',
@@ -67,7 +65,7 @@ class HomeScreen extends React.Component {
       .set({
         invite1: {
           hostname: 'Alma A Evans',
-          date: 'Sunday 17 June',
+          date: 'Monday 17 June',
           time: '8:00 PM',
           status: 'pending',
           location: 'Silver Kitchen, New Street',
@@ -75,7 +73,7 @@ class HomeScreen extends React.Component {
         },
         invite2: {
           hostname: 'Alma B Evans',
-          date: 'Sunday 17 June',
+          date: 'Monday 17 June',
           time: '8:00 PM',
           status: 'pending',
           location: 'Silver Kitchen, New Street',
@@ -83,7 +81,7 @@ class HomeScreen extends React.Component {
         },
         invite3: {
           hostname: 'Alma C Evans',
-          date: 'Sunday 17 June',
+          date: 'Monday 17 June',
           time: '8:00 PM',
           status: 'pending',
           location: 'Silver Kitchen, New Street',
@@ -96,7 +94,7 @@ class HomeScreen extends React.Component {
   async getData() {
     const db = firebase.firestore();
     db.collection('test-data')
-      .doc('invitations')
+      .doc('pending_invitations')
       .get()
       .then((doc) => {
         if (!doc.exists) {

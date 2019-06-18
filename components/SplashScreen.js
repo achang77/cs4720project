@@ -26,8 +26,8 @@ const ar = {
 
 i18n.fallbacks = true;
 i18n.translations = { ar, en };
-i18n.locale = Localization.locale;
-// i18n.locale = 'ar';
+// i18n.locale = Localization.locale;
+i18n.locale = 'ar';
 
 class SplashScreen extends React.Component {
   static navigationOptions = {
@@ -63,7 +63,6 @@ class SplashScreen extends React.Component {
       const { type, token } = await Facebook.logInWithReadPermissionsAsync('667289577029658', {
         permissions: ['public_profile'],
       });
-      // console.log(`${type} ${token}`);
 
       switch (type) {
         case 'success': {
